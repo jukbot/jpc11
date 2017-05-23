@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>JPC 11</title>
+  <meta content="index, nofollow" name="robots">
+  <meta content="#333333" name="theme-color">
+  <meta content="Computer Science @ SIT KMUTT" name="author">
+  <meta content="Junior Programmer Camp (JPC) หรือ ค่ายสานฝันน้อง ม.ปลายสู่สายอาชีพโปรแกรมเมอร์ เป็นค่ายสำหรับน้องๆ ม.ปลาย ที่มีความสนใจในหลักสูตร CS ของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เราจะมาทำความรู้จักว่า CS คืออะไร มีการเรียนการสอนเกี่ยวกับอะไรบ้าง นอกจากนี้น้องๆจะได้สัมผัสถึงบรรยากาศและการใช้ชีวิตในรั้วมหาวิทยาลัย และยังมีกิจกรรมสนุกๆภายในค่าย JPC ของเรา" name="description">
+  <meta content="JPC 11,Junior Programmer Camp, KMUTT, SIT, JPC Camp, Progammer, Java, Algorithm, System, Security, HTML,CSS,XML,JavaScript,DOM,jQuery,ASP.NET,PHP,SQL,colors,tutorial,color table,cascading style sheets,active server pages,Web building,Webmaster" name="keywords">
+  <meta property="og:url" content="http://jpc-kmutt.net/">
+  <meta property="og:title" content="Junior Programmer Camp #11">
+  <meta property="og:image" content="img/LogoShare.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Junior Programmer Camp #11">
+  <link href="http://jpc-kmutt.net/" rel="canonical">
+  <link href="http://jpc-kmutt.net/humans.txt" rel="author">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" media="screen,projection" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css" media="screen,projection" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" media="screen,projection" rel="stylesheet">
+  <link href="icon.png" rel="apple-touch-icon">
+  <link href="icon.png" rel="shortcut icon">
+  </head>
+  <body>
+    <div id="background"></div> 
+    <!-- lightbox container hidden with CSS -->
+    <a href="#_" class="lightbox" id="img_line"><img alt="line" src="img/line.png"></a>
+    <a href="#_" class="lightbox" id="img_map"><img alt="campus_map" src="img/bangmod-map.jpg"></a>
+  <div id="modal1" class="modal">
+    <div class="modal-content thr">
+      <div class="container">
+        <h4 class="center thrh">ระบบรับสมัคร</h4>
+          <form class="col s12" id="register" enctype="multipart/form-data" action="/user/register" autocomplete="on" method="POST">
+              <div class="row">
+              <h4 class="thrh">ข้อมูลส่วนตัว</h4>
+                <div class="input-field col s6">
+                  <input id="first_name" type="text" class="validate" placeholder="" name="fname" maxlength="30" required>
+                  <label for="first_name">ชื่อ</label>
+                </div>
+                <div class="input-field col s6">
+                  <input id="last_name" type="text" class="validate sec" placeholder="" name="lname" maxlength="60" required>
+                  <label for="last_name">นามสกุล</label>
+                </div>
+              </div>
+          <div class="row">
+           <div class="input-field col s6">
+            <input id="nickname" type="text" class="validate" placeholder="" name="nickname" maxlength="8" required>
+            <label for="nickname">ชื่อเล่น</label>
+          </div>
+            <div class="input-field col s6">
+                 <input id="age" type="text" class="validate sec" placeholder="" name="age" maxlength="2" required>
+                 <label for="age">อายุ</label>
+          </div>
+          </div>
+
+          <div class="row">
+           <div class="input-field col s6">
+                <input type="text" name="dob" class="validate" placeholder="วัน เดือน ปีพ.ศ." required>
+                <label for="dob">วันเกิด</label>
+          </div>
+          <div class="input-field col s6">
+          <div class="sex">
+           <input name="gender" type="radio" value="male" id="male" required/>
+           <label class="gender" for="male">ชาย</label>
+           <input name="gender" type="radio" value="female" id="female" required/>
+           <label class="gender" for="female">หญิง</label>
+           </div>
+           <label for="male">เพศ</label>
+           </div>
+          </div>
+          <div class="row">
+              <div class="input-field col s6">
+               <input id="religion" type="text" class="validate" placeholder="" name="religion" required>
+               <label for="religion">ศาสนา</label>
+             </div>
+             <div class="input-field col s6">
+              <input id="nationality" type="text" class="validate sec" placeholder="" name="nationality" maxlength="18" required>
+              <label for="nationality">สัญชาติ</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s6">
+
+             <input id="weight" type="text" class="validate" placeholder="" name="weight" maxlength="3" required>
+             <label for="weight">น้ำหนัก (kg.)</label>
+           </div>
+
+           <div class="input-field col s6">
+            <input id="height" type="text" class="validate sec" placeholder="" name="height" maxlength="3" required>
+            <label for="height">ส่วนสูง (cm.)</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="tel" type="text" class="phone" placeholder="" name="tel" maxlength="10" required>
+            <label for="tel">เบอร์โทรศัพท์มือถือ</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="dad_tel" type="text" class="phone sec" placeholder="" name="dad_tel" maxlength="10">
+            <label for="dad_tel">เบอร์โทรศัพท์มือถือผู้ปกครอง 1*</label>
+          </div>
+         </div>
+         <div class="row">
+          <div class="input-field col s6 ">
+            <input id="mom_tel" type="text" class="phone" placeholder="" name="mom_tel" maxlength="10">
+            <label for="mom_tel">เบอร์โทรศัพท์มือถือผู้ปกครอง 2</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="line" type="text" class="validate sec" placeholder="" name="line" maxlength="30">
+            <label for="line">Line (ไม่บังคับ)</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="disease" type="text" class="validate" placeholder="" name="disease" maxlength="60">
+            <label for="disease">โรคประจำตัว</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="allergy" type="text" class="validate sec" placeholder="" name="allergy" maxlength="60">
+            <label for="allergy">อาหาร/สิ่งที่แพ้</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="address" type="text" class="validate" placeholder="" name="address" maxlength="120" required>
+            <label for="address">ที่อยู่ปัจจุบัน</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="email" type="email" class="validate" placeholder="name@mail.com" name="email" maxlength="80" required>
+            <label for="email">E-mail</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="facebook" type="url" class="validate sec" placeholder="https://www.facebook.com/profile" name="facebook" maxlength="120">
+            <label for="facebook">Facebook</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+        <h4 class="thrh" style="margin-top: 80px;">การศึกษา</h4>
+          <div class="input-field col s12">       
+         <select id="class" class="validate" name="class">
+            <option class="thr" value="" disabled selected>&nbsp;</option>
+            <option class="thr" value="Grade 10">มัธยมศึกษาปีที่ 4</option>
+            <option class="thr" value="Grade 11">มัธยมศึกษาปีที่ 5</option>
+            <option class="thr" value="Grade 12">มัธยมศึกษาปีที่ 6</option>
+        </select>
+            <label for="class">กำลังศึกษาอยู่ในระดับชั้น (ปีการศึกษา 2558)</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="grade" type="text" class="validate" placeholder="0.00" name="grade" maxlength="4">
+            <label for="grade">เกรดเฉลี่ย</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="school" type="text" class="validate" placeholder="" name="school" maxlength="150">
+            <label for="school">โรงเรียน</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="plan" type="text" class="validate" placeholder="" name="plan" maxlength="30">
+            <label for="plan">แผนการเรียน</label>
+          </div>
+        </div>
+
+
+        <div class="row">
+        <h4 class="thrh" style="margin-top: 80px;">ความสนใจ</h4>
+          <div class="input-field col s12">
+            <input id="plang" type="text" class="validate" placeholder="" name="plang" maxlength="150">
+            <label for="plang">Programming Language ที่สนใจ</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="university" type="text" class="validate" placeholder="" name="university" maxlength="150">
+            <label for="university">คณะที่ใฝ่ฝัน</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="camp" type="text" class="validate" placeholder="" name="camp" maxlength="150">
+            <label for="camp">ค่ายที่เคยเข้าร่วม</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="award" type="text" class="validate" placeholder="" name="award" maxlength="150">
+            <label for="award">รางวัลที่เคยได้รับเกี่ยวกับคอมพิวเตอร์</label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+        <h4 class="thrh">คำถาม</h4>
+          <div class="input-field col s12">
+            <textarea id="q1" class="materialize-textarea validate" placeholder="" maxlength="800" name="q1"></textarea>
+            <label for="q1">1.) ถ้าน้องเจอกับแม่มดกลางป่าตามลำพังและมีอาวุธเพียงหนึ่งชิ้นเพื่อใช้ป้องกันตัว น้องจะเลือกอาวุธชิ้นไหนและเพราะอะไรน้องถึงเลือกอาวุธชิ้นนั้น  [ดาบ, ไม้กายสิทธิ์, ปืน, ธนู, มีดพก, กระจก]</label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+          <div class="input-field col s12">
+            <textarea id="q2" class="materialize-textarea validate" placeholder="" maxlength="800" name="q2"></textarea>
+            <label for="q2">2.) จงแต่งเรื่องโดยเลือกใช้เพียง 7 คำจากคำทั้งหมดต่อไปนี้<br>[โปรแกรมเมอร์, ค่าย JPC, ไอฟาย, เกรียนหัวเขียว, มะพร้าวแก้ว, โคตรมันส์, โดดเลยดีออก, problem?, แคปหมู, ไอโฟน]</label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+          <div class="input-field col s12">
+            <textarea id="q3" class="materialize-textarea validate" placeholder="" maxlength="800" name="q3"></textarea>
+            <label for="q3">3.) ถ้าหากน้องได้กลายเป็นโปรแกรมเมอร์ น้องอยากจะสร้างหรือพัฒนาโปรแกรมอะไรและเพราะอะไร?</label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+          <div class="input-field col s12">
+            <textarea id="q4" class="materialize-textarea validate" placeholder="" maxlength="800" name="q4"></textarea>
+            <label for="q4">4.) นักโทษตาบอดเข้ารับการทดสอบก่อนโดนประหาร โดยได้รับยามา 4 เม็ด เป็นสีดำ 2 และสีขาว 2 เม็ด ถ้าเขาสามารถกินยาสีดำ 1 เม็ดและสีขาว 1 เม็ดได้เขาจะได้รับการอภัยโทษ ถ้าน้องเป็นนักโทษคนนั้นจะทำอย่างไร ?</label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+          <div class="input-field col s12">
+            <textarea id="q5" class="materialize-textarea validate" placeholder="" maxlength="800" name="q5"></textarea>
+            <label for="q5">5.) ระหว่างภาษา C++ และ Java น้องคิดว่ามีอะไรที่คล้ายคลึงกัน</label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+          <div class="input-field col s12">
+            <textarea id="q6" class="materialize-textarea validate" placeholder="" maxlength="800" name="q6"></textarea>
+            <label for="q6" style="text-align: left;">6.) ให้น้อง ๆ หาค่า n ของ code ต่อไปนี้&nbsp;&nbsp;“กำหนดให้ c มีค่า 250 และค่าของ n คือ (c/10)%10*10"
+            </label>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 80px;">
+          <div class="input-field col s12">
+            <textarea id="q7" class="materialize-textarea validate" placeholder="" maxlength="800" name="q7"></textarea>
+            <label for="q7">7.) น้องคาดหวังอะไรจากค่ายนี้
+            </label>
+          </div>
+        </div>
+
+        <div class="row">
+        <h4 class="thrh" style="margin-top: 80px;">หลักฐาน</h4>
+         <div class="file-field input-field">
+            <input class="file-path validate" type="text" placeholder="รูปถ่ายชุดนักเรียน" readonly/>
+            <div class="waves-effect waves-light btn-large cyan darken-1">
+              <span>Browse</span>
+              <input type="file" name="student_photo" accept=".gif,.png,.jpg,.jpeg,.pdf"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+         <div class="file-field input-field">
+            <input class="file-path validate" type="text" placeholder="ป.พ. 1 (เฉพาะ ม.5-6)" readonly/>
+            <div class="waves-effect waves-light btn-large cyan darken-1">
+              <span>Browse</span>
+              <input type="file" name="result_photo" accept=".gif,.png,.jpg,.jpeg,.pdf"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+         <div class="file-field input-field">
+            <input class="file-path validate" type="text" placeholder="ใบรับรองความเป็นนักเรียน* (เฉพาะ ม.4)" readonly/>
+            <div class="waves-effect waves-light btn-large cyan darken-1">
+              <span>Browse</span>
+              <input type="file" name="school_photo" accept=".gif,.png,.jpg,.jpeg,.pdf"/>
+            </div>
+          </div>
+        </div>
+        <small>* สามารถบ่งบอก ชื่อโรงเรียน, แผนการเรียน และระดับชั้น ได้</small>
+    <div class="row" style="margin-top:20px;">
+      <input type="checkbox" class="filled-in" id="confirm"/>
+
+      </div>
+  <div class="row center"><a href="#" id="register-btn" class="waves-effect waves-light btn-large deep-purple darken-1">สมัครค่าย</a></div>
+        </form>
+    </div><!-- container -->
+  </div>
+</div>
+
+<audio id="background_audio" autoplay="autoplay" loop><source id="source-audio" src="audio/" type="audio/mpeg"/></audio> 
+<div class="viewport-section" id="regis" >
+  <a href="javaScript:void(0);" id="mute" class="left speaker"><i class="fa fa-volume-up"></i></a>
+  <div class="head-container">
+    <div class="head-section  no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <img alt="logo" class="animated-logo logo" src="img/logo.png">
+        </div>
+        <div class="row center">
+          <h1 class="header center th4 fadein">ค่ายสานฝันน้อง ม.ปลายสู่สายอาชีพโปรแกรมเมอร์ ครั้งที่ 11</h1>
+          <h3 class="header col s12 light fadein">Junior Programmer Camp 11<sup>th</sup></h3>
+        </div>
+        <div class="row center regis-padding">
+          <div class="fadein"><a class="waves-effect waves-light btn-large btn-disabled thx regis modal-trigger" disabled id="open-regis-button" href="#modal1">ปิดรับสมัคร</a>
+          </div>
+        </div>
+        <div class="row center">
+         <h5 class="header col s12 light quote fadein">"Develop your mind along your dream"</h5>
+       </div>
+     </div>
+   </div>
+ </div>
+ <nav id="main-nav">
+  <div class="container">
+    <ul id="main-nav-list">
+      <li>
+        <a href="#about_content">
+          <i class="fa fa-flag fa-2x"></i> <p>About</p>
+        </a>
+      </li>
+      <li>
+        <a href="#detail_content">
+          <i class="fa fa-info-circle fa-2x"></i><p>Detail</p>
+        </a>
+      </li>
+      <li>
+        <a href="#schedule_content">
+          <i class="fa fa-calendar  fa-2x"></i><p>Schedule</p>
+        </a>
+      </li>
+      <li>
+        <a href="#location_content">
+          <i class="fa fa-map-marker fa-2x"></i><p>Location</p>
+        </a>
+      </li>
+      <li>
+        <a href="#faq_content">
+          <i class="fa fa-question-circle fa-2x"></i><p>FAQ</p>
+        </a>
+      </li>
+      <li>
+        <a href="#gallery_content">
+          <i class="fa fa-picture-o fa-2x"></i><p>Gallery</p>
+        </a>
+      </li>
+      <li>
+        <a href="#contact_content">
+         <i class="fa fa-phone fa-2x"></i><p>Contact</p>
+       </a>
+     </li>
+     <li>
+      <a href="#sponsor_content">
+        <i class="fa fa-magic fa-2x"></i><p>Sponsors</p>
+      </a>
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
+<div class="greybg" id="about_content">
+  <div class="space"></div>
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <i class="white-text fa fa-flag fa-3x"></i>
+          <h4 class="white-text title-padding-mobile ">About JPC</h4>
+          <p class="tha white-text intro"><span class="amber-text">Junior Programmer Camp (JPC)</span> หรือ ค่ายสานฝันน้อง ม.ปลายสู่สายอาชีพโปรแกรมเมอร์ เป็นค่ายสำหรับน้องๆ ม.ปลาย ที่มีความสนใจในหลักสูตร CS ของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เราจะมาทำความรู้จักว่า CS คืออะไร มีการเรียนการสอนเกี่ยวกับอะไรบ้าง นอกจากนี้น้องๆจะได้สัมผัสถึงบรรยากาศและการใช้ชีวิตในรั้วมหาวิทยาลัย และยังมีกิจกรรมสนุกๆภายในค่าย JPC ของเรา</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="very-greybg smart-height-content" id="detail_content">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center detail-section">
+          <i class="white-text fa fa-info-circle fa-3x"></i>
+          <h4 class="white-text title-padding-mobile ">Detail</h4>
+          <div class="center detail-content">
+            <p class="th2 white-text">รูปแบบการสมัคร</p>
+            <p class="thx white-text">สมัครทางระบบอินเทอร์เน็ตผ่านเว็บไซต์<br><a class="link" href="#">www.jpc-kmutt.net</a></p>
+            <hr class="hr-dark">
+            <p class="th2 white-text">เนื้อหาการเข้าอบรม</p>
+            <p class="thx white-text">พื้นฐานการเขียนโปรแกรม, สถาปัตยกรรมและองค์ประกอบทางคอมพิวเตอร์</p>
+            <hr class="hr-dark">
+            <p class="th2 white-text">ระยะเวลาในการอบรม</p>
+            <p class="thx white-text">4 วัน 3 คืน</p>
+            <hr class="hr-dark">
+            <p class="th2 white-text">สถานที่พัก</p>
+            <p class="thx white-text">หอพักนักศึกษา มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+            <hr class="hr-dark">
+            <p class="th2 white-text">คุณสมบัติของผู้สมัคร</p>
+            <p class="thx white-text">นักเรียน ม.4 - ม.6 สายวิทยาศาสตร์-คณิตศาสตร์ เกรดเฉลี่ย 2.00 ขึ้นไป</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="greybg" id="schedule_content">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+         <i class="white-text fa fa-calendar fa-3x"></i>
+         <h4 class="white-text title-padding-mobile ">Schedule</h4>
+         <div class="center">
+          <img alt="timeline" class="bounced-animated timeline" src="svg/timeline_blink.svg">
+          <img alt="timeline" class="timeline" src="svg/timeline.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="bgborder"></div>
+<div class="whitebg"  id="location_content">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <i class="black-text fa fa-map-marker fa-3x"></i> 
+          <h4 class="black-text title-padding-mobile ">Location</h4>
+          <h5 class="black-text">King Mongkut's University of Technology Thonburi</h5>
+          <p class="tha black-text">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี 126 ถ.ประชาอุทิศ, แขวงบางมด เขตทุ่งครุ, กรุงเทพฯ 10140</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="google_map">
+   <div class="map-canvas" id="map-canvas"></div>
+  </div>
+</div>
+<div class="whitebg " id="faq_content">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12">
+          <div class="center">
+            <i class="black-text fa fa-question-circle fa-3x"></i>           
+          </div>
+          <h4 class="black-text center title-padding-mobile ">FAQ</h4>
+          <div class="left">
+            <p class="qu th2">Q: ค่าสมัครคนละกี่บาท?</p>
+            <p class="thx">A: ค่าสมัครเพียงคนละ 450 บาท รวมค่าอาหาร ที่พัก และเสื้อค่ายเรียบร้อยแล้วครับ</p>
+            <hr>
+            <p class="qu th2">Q: อยากสมัคร ต้องทำอย่างไรบ้าง?</p>
+            <p class="thx">A: ง่ายๆ เพียงกดปุ่ม <a href="#regis">สมัคร</a> ด้านบน พร้อมแนบรูปภาพและเอกสารตามรายละเอียดที่ระบุในเว็บเลยครับ</p>
+            <hr>
+            <p class="qu th2">Q: ไม่ค่อยเชี่ยวชาญด้านทักษะคอมพิวเตอร์ จะสมัครได้ไหม?</p>
+            <p class="thx">A: ได้ครับ เพราะโครงการนี้มีวัตถุประสงค์เพื่อแนะนำการเรียนการสอนและการปฏิบัติเชิงคอมพิวเตอร์อยู่แล้ว ขอแค่น้องมีความสนใจด้านคอมพิวเตอร์และมีคุณสมบัติตามที่ระบุไว้ในใบสมัครก็สามารถสมัครเข้าร่วมโครงการได้ครับ</p>
+            <hr>
+            <p class="qu th2">Q: ไปพักค้างคืนที่ไหน?</p>
+            <p class="thx">A: หอพักใน แยกฝั่งชาย หญิง และมีพี่ ๆ คอยดูแลน้อง 24 ชั่วโมงครับ</p>
+            <hr>
+            <p class="qu th2">Q: จำเป็นต้องพก Notebook,Labtop ไปด้วยไหม?</p>
+            <p class="thx">A: ไม่จำเป็นครับ ทางเรามีห้องแล็ปพร้อมคอมพิวเตอร์ที่พร้อมใช้งานให้กับน้อง ๆ ทุกคนครับ</p>
+            <hr>
+            <p class="qu th2">Q: อยู่ต่างจังหวัด ต้องเดินทางมาเอง มีคำแนะนำไหม?</p>
+            <p class="thx">A: หากน้องเดินทางเข้าร่วมโครงการฯ จากต่างจังหวัด สามารถระบุจุดนัดพบตามที่ระบุไว้ในใบสมัครฯไว้ ในวันที่น้องเดินทางมาเข้าร่วมโครงการ<br>(วันที่ 17 กรกฎาคม 2558) จะมีพี่ๆ ของโครงการฯ ไปดูแลและอำนวยความสะดวกในการเดินทาง <a href="#img_map">รายละเอียดเพิ่มเติมของจุดนัดพบ...
+            </a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="greybg"  id="gallery_content">
+  <div id="gallery-jpc" class="owl-carousel owl-theme">
+    <div class="item"><img src="img/gallery/1.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/2.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/3.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/4.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/5.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/6.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/7.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/8.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/9.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/10.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/11.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/12.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/13.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/14.jpg" alt="gallery"></div>
+    <div class="item"><img src="img/gallery/15.jpg" alt="gallery"></div>
+  </div>
+</div>
+<div class="greybg"  id="contact_content">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <i class="white-text fa fa-phone fa-3x"></i>
+          <h4 class="white-text title-padding-mobile ">Contact</h4>
+            <h5 class="white-text th4">พี่จ้า: Tel: <span class="amber-text">091-782-4764</span></h5>
+            <h5 class="white-text th4">พี่ลูกกอล์ฟ Tel: <span class="amber-text">095-899-0857</span></h5>
+            <h5 class="white-text th4">พี่บอย Tel: <span class="amber-text">099-910-3089</span></h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="bgborder"></div>
+<div class="whitebg" id="sponsor_content">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <i class="black-text fa fa-magic fa-3x"></i>
+          <h4 class="black-text title-padding-mobile">Our Sponsors</h4>
+        </div>
+        <div class="center vertical">
+           <ul class="ch-grid"> 
+             <li><a href="https://www4.sit.kmutt.ac.th"><img alt="SIT" class="sponsor" src="svg/SIT.svg"></a></li> 
+             <li><a href="http://www2.kmutt.ac.th"><img alt="KMUTT" class="sponsor3" src="svg/KMUTT.svg"></a></li> 
+             <li><a href="http://do.in.th"><img alt="Do in Thai" class="sponsor" src="svg/DOINTH.svg"></a></li> 
+           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col l5 s12 footer-row">
+        <h5 class="topic">About JPC</h5>
+        <p class="text-lighten-4 th"><span class="amber-text th">Junior Programmer Camp (JPC)</span> หรือ ค่ายสานฝันน้อง ม.ปลายสู่สายอาชีพโปรแกรมเมอร์ เป็นค่ายสำหรับน้องๆ ม.ปลาย ที่มีความสนใจในหลักสูตร CS ของมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี เราจะมาทำความรู้จักว่า CS คืออะไร มีการเรียนการสอนเกี่ยวกับอะไรบ้าง นอกจากนี้น้องๆจะได้สัมผัสถึงบรรยากาศและการใช้ชีวิตในรั้วมหาวิทยาลัย และยังมีกิจกรรมสนุกๆภายในค่าย JPC</p>
+      </div>
+      <div class="col l3 s12 footer-row">
+        <div class="social_link">
+          <h5 class="topic">Follow Us</h5>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/jpckmutt" target="_blank"><i class="fa fa-facebook fa-1x"></i>&nbsp;Facebook</a>
+            </li>
+            <li>
+              <a href="https://www.plus.google.com/+kmutt/videos" target="_blank"><i class="fa fa-google-plus fa-1x"></i>&nbsp;Google+</a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/jpckmutt" target="_blank"><i class="fa fa-twitter fa-1x"></i>&nbsp;Twitter</a>
+            </li>
+            <li>
+              <a href="https://www.youtube.com/watch?v=G9uB20VyBPo" target="_blank"><i class="fa fa-youtube-play fa-1x"></i>&nbsp;Youtube</a>
+            </li>
+            <li>
+             <a href="#img_line"><i class="fa fa-comment fa-1x"></i>&nbsp;Line Official</a>
+           </li>
+         </ul>
+       </div>
+     </div>
+     <div class="col l4 s12 footer-row">
+      <div class="contact">
+        <h5 class="topic">Contact Us</h5>
+        <ul>
+          <li class="th">ชั้น 2 คณะเทคโนโลยีสารสนเทศ<br>
+            มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี<br>
+            126 ถ.ประชาอุทิศ แขวงบางมด เขตทุ่งครุ กรุงเทพฯ 10140</li>
+            <li>Tel: 02-470-9850</li>
+            <li>E-mail: <a href="mailto:jpc11@jpc-kmutt.net?subject=feedback">jpc11@jpc-kmutt.net</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      &copy; 2015 JPC CAMP <a href="http://www.cs.sit.kmutt.ac.th/ng/" target="_self">CS @ SIT KMUTT</a>&nbsp;&nbsp;&nbsp;Contributed by <a href="https://juk.life" target="_self">Juk</a>
+      <div class="right">
+        <a href="policy.html" target="_self">Privacy Policy</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="term.html" target="_self">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script> 
+<script>
+      function initMap() {
+         var kmuttLatLng = {lat: 13.6514024, lng: 100.4939919};
+         // Create a map object and specify the DOM element for display.
+         var map = new google.maps.Map(document.getElementById('map-canvas'), {
+          center: kmuttLatLng,
+          scrollwheel: false,
+          zoom: 16, // 1 -20 levels
+          tilt: 45
+        });
+        // Create a marker and set its position.
+        var marker = new google.maps.Marker({
+          map: map,
+          position: kmuttLatLng,
+          title: 'KMUTT'
+        });
+      }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtSZ7h5RAZH3liB_Xgbc5lkOWYS5ahqB0&callback=initMap" async defer></script>
+<script src='https://www.google.com/recaptcha/api.js' async defer></script> 
+<script src="js/scroll.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/owl.carousel.js"></script>
+<script src="js/jquery.slicknav.js"></script>
+<script src="js/input.mask.js"></script>
+<script>
+// click on map to remove cover
+var $map, $cover;
+$map = $('.google_map');
+$cover = $('<div class="cover"></div>');
+$map.append($cover);
+$cover.on('click', function () {
+$cover.remove();});
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+  // change background upto time 
+  var d = new Date();
+  var n = d.getHours();
+  var bg = document.getElementById('background');
+  var sfx = document.getElementById('background_audio');
+// If time is 6.00AM - 8.59AM, apply sunrise theme and music to background
+if (n >= 5 && n < 9)
+bg.style.background =  "url('img/bg.jpg') no-repeat scroll center top / cover",
+sfx.src ="audio/com.mp3", 
+sfx.load(), sfx.volume=0.25, sfx.play();
+// If time is between 9.00AM – 14.59PM noon theme and music to background
+else if (n >= 9 && n < 15) 
+bg.style.background =  "url('img/bg2.jpg') no-repeat scroll center top / cover",
+sfx.src ="audio/bg3.mp3",
+sfx.load(), sfx.volume=0.25, sfx.play();
+// If time is between 15.00PM – 18.00PM sunset theme and music to background
+else if (n >= 15 && n < 18) 
+bg.style.background =  "url('img/bg2.jpg') no-repeat scroll center top / cover",
+sfx.src ="audio/com.mp3",
+sfx.load(), sfx.volume=0.25, sfx.play();
+// If time is between 18.01PM – 20.59PM night theme and music to background
+else if (n >= 18 && n < 21) 
+bg.style.background = "url('img/bg4.jpg') no-repeat scroll  center top / cover",
+sfx.src ="audio/bg3.mp3",
+sfx.load(), sfx.volume=0.25, sfx.play();
+// If time is 21.00PM - 5.59AM, apply mid-night theme and music to background
+else 
+bg.style.background = "url('img/bg5.jpg') no-repeat scroll center top / cover",
+sfx.src ="audio/bg2.mp3", 
+sfx.load(), sfx.volume=0.25, sfx.play();
+ // audio mute toggle
+document.getElementById('mute').addEventListener('click', function (e) {
+    e = e || window.event;
+    sfx.muted = !sfx.muted;
+    e.preventDefault();
+}, false);
+}); 
+</script>
+<script >
+  $(document).ready(function() {
+    $("#gallery-jpc").owlCarousel({ 
+          navigation : false, // Show next and prev buttons
+          slideSpeed : 500,
+          paginationSpeed : 500,
+          singleItem:true,
+          autoPlay : true,
+          // "singleItem:true" is a shortcut for:
+          items : 10, 
+          itemsDesktop : false,
+          itemsDesktopSmall : false,
+          itemsTablet: true,
+          itemsMobile : false    
+        });     
+    $("#mute").click(function() { 
+      $(this).find('i').toggleClass('fa fa-volume-off fa fa-volume-up') });
+
+   $(function(){
+   $('#main-nav-list').slicknav(); });
+
+   $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 39 // Creates a dropdown of 15 years to control year
+   });
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+   // $('.modal-trigger').leanModal();
+    //$('select').material_select();
+
+jQuery(function($){
+   $('.date').mask("99/99/9999",{placeholder:"DD/MM/YYYY"});
+   $('.phone').mask("999-999-9999");
+   $('#grade').mask("9.99");
+});
+  });
+</script>
+
+<script>
+  var bg = $("body");
+  $(window).resize("resizeBackground");
+  function resizeBackground() {
+    bg.height($(window).height());
+  }
+  resizeBackground();
+// for scrolling body locked when model opened
+
+  $(function(){
+
+    $('#open-regis-button').click(function(e){
+      e.preventDefault();
+      $('#modal1').modal('open');
+      $('body').attr('style','overflow:hidden');
+    }),
+
+    $('#lean-overlay').click(function(){
+      $('#modal1').modal('close');
+     
+      $('body').attr('style','overflow:scroll');
+    });
+
+    var wait=false;
+    $('#register-btn').click(function(e){
+      e.preventDefault();
+    	if($('#confirm').is(':checked') && !wait){
+      		$('#register').submit();
+          wait=true;
+          $(this).text('กำลังบันทึก...');
+    	}else{
+    		alert('กรุณายอมรับเงื่อนไขการสมัคร');
+    	}
+    });
+
+    $('#register').on("submit",function(e) {
+        e.preventDefault();
+        var formData = new FormData(this);
+
+        $.ajax({
+            type: "POST",
+            url: "/user/register",
+            data: formData,
+            cache: false,
+            contentType: false,
+            processData: false,
+            success: function(data){
+
+                wait=false;
+               $('#register-btn').text('สมัครค่าย');
+                if(data=='success'){
+                	alert('บันทึกข้อมูลสำเร็จ ติดตามข่าวสารได้ทาง Facebook Junior Progammer Camp');
+                  location.reload(); 
+                }else{
+                	alert(data);
+                }
+            },
+            error: function(data){
+                 wait=false;
+                $('#register-btn').text('สมัครค่าย');
+                alert('error');
+        }
+       });            
+    });
+  });
+
+ //$('#recaptcha-anchor').click(function(){
+  //  var robot = false;
+   // robot = document.getElementById("recaptcha-anchor").getAttribute("aria-checked"); 
+     // if(robot==="true"){ alert('CHECK'); }
+   // });
+    
+</script>
+</body>
+</html>  

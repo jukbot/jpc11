@@ -1,0 +1,25 @@
+User-Agent: *
+Disallow: 
+
+User-Agent: Googlebot
+Allow: /
+
+User-Agent: Googlebot-Mobile
+Allow: /
+
+User-Agent: Googlebot-Image
+Allow: /
+
+User-Agent: Mediapartners-Google
+Allow: /
+
+User-Agent: Adsbot-Google
+Disallow: /
+
+User-Agent: Slurp
+Disallow: /
+
+User-Agent: Teoma
+Disallow: /
+
+Sitemap: http://jpc12.sit.kmutt.ac.th/sitemap.xml
