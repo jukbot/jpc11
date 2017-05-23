@@ -436,14 +436,14 @@ img {
   z-index: -999;
 }
 .greybg {
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.7);
   width: 100%;
   height: auto;
   z-index: -999;
 
 }
 .very-greybg {
-  background: rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.6);
   /*background: #FFF;*/
   width: 100%;
   height: auto;
@@ -757,7 +757,7 @@ footer.page-footer .footer-copyright {
 footer.page-footer {
   padding-top: 20px;
   color: #FFF;
-  background-color: rgba(21,21,21,0.50);
+  background-color: rgba(0,0,0,0.80);
   bottom: 0;
 }
 footer a {
